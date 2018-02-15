@@ -1,0 +1,69 @@
+welcome: # this is the #welcome bloc referenced in index.js
+  - typing: true
+    text: # Picks one randomly
+      - Hey merhaba!
+      - Merhaba {{user.first_name}}
+      - İyi günler :)
+  - text: 
+    - Size nasıl yardımcı olabilirim? ;)
+    - Benden ne yapmamı istersiniz? ;)
+    typing: 2s
+
+
+askStopConvo:
+  - template_type: button
+    text: There is already an other conversation active. You must first stop the previous conversation.
+    buttons:
+      - <STOP_CONVO> Stop previous conversation
+
+
+askUserName:
+  - text:
+    - İsminiz nedir?
+    - Adınızı öğrenebilir miyim?
+    - Adınız nedir?
+    - İsminizi öğrenebilir miyim?
+    - İsminiz nedir?
+    - Pekala, işe önce isminizi öğrenmekle başlayalım :)
+    typing: 2s
+
+askUserName_reply:
+  - Adınız {{name}}
+
+askUserName_miss:
+  - Bu isim değil
+
+askUserAge:
+  - text:
+    - Kaç yaşındasınız?
+    - Yaşınızı öğrenebilir miyim?
+    - Yaş kaç reis?
+    - Reis sen doğalı kaç yıl oldu?
+
+askUserAge_reply:
+  - Yaşınız {{age}}
+
+askUserAge_miss:
+  - Bu sayıya benzemiyor.
+
+askUserSex:
+  - text:
+    - Cinsiyetiniz ne?
+
+askUserSex_reply:
+  - cinsiyetiniz {{sex}}
+
+askUserRequest:
+  - text:
+    - Benden ne yapmamı ister siniz?
+    - Sizin için hangi poliklinikten randevu almamı istersiniz?
+    - Gitmek istediğiniz bölümü öğrenebilir miyim?
+    - typing: 2s
+    
+askUserRequest_reply:
+  - gitmek istediğiniz bölüm {{req}}
+
+goodbye:
+  - text: You are leaving because of reason {{reason}}
+    typing: true
+  - Hope to see you back again soon! # if no other properties, you can just send a strings
